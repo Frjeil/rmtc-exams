@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "exams": "Exams",
+    "myExams": "My exams",
+    "votes": "Votes",
+    "login": "Login",
+    "logout": "Logout",
+    "language": "Language",
+    "roles": {
+      "user": "Student",
+      "admin": "Admin",
+      "supervisor": "Supervisor"
+    }
+  },
+  "login": {
+    "title": "Sign in",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "password": "Password",
+    "submit": "Login",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Register",
+    "errors": {
+      "email": "Invalid email",
+      "password": "Password is required"
+    },
+    "success": "Logged in",
+    "error": "Login error"
+  },
+  "register": {
+    "title": "Register",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "nameRequired": "Name is required",
+    "email": "Email",
+    "password": "Password",
+    "confirm": "Confirm password",
+    "submit": "Register",
+    "minPassword": "At least 8 characters",
+    "passwordMismatch": "Passwords do not match",
+    "success": "Registration complete",
+    "error": "Registration error",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Sign in"
+  },
+  "exams": {
+    "title": "Available exams",
+    "titleFilter": "Title",
+    "titlePlaceholder": "Filter by title",
+    "date": "Date",
+    "sort": "Sort",
+    "filter": "Filter",
+    "enroll": "Enroll",
+    "enrolled": "Enrolled",
+    "enrollSuccess": "Enrollment to \"{{title}}\" complete",
+    "alreadyEnrolled": "You are already enrolled in \"{{title}}\"",
+    "enrollError": "Enrollment error",
+    "loadError": "Loading error",
+    "enrolledError": "Error retrieving enrollments",
+    "newExam": "New exam",
+    "assignVote": "Assign grade"
+  },
+  "myExams": {
+    "title": "My exams",
+    "exam": "Exam",
+    "date": "Date",
+    "vote": "Grade",
+    "pending": "Pending",
+    "empty": "No exams."
+  },
+  "votes": {
+    "title": "Votes",
+    "exam": "Exam",
+    "date": "Date",
+    "student": "Student",
+    "vote": "Grade",
+    "gradedOn": "Graded on",
+    "empty": "No grades assigned.",
+    "assign": "Assign grade",
+    "titleFilter": "Title",
+    "titlePlaceholder": "Filter by title",
+    "sort": "Sort",
+    "filter": "Filter"
+  },
+  "newExamModal": {
+    "title": "New exam",
+    "titleField": "Title",
+    "titlePlaceholder": "E.g. Mathematical Analysis I",
+    "date": "Date",
+    "cancel": "Cancel",
+    "submit": "Create exam",
+    "titleRequired": "Title is required",
+    "dateInvalid": "Invalid date",
+    "created": "Exam \"{{title}}\" created",
+    "error": "Creation error"
+  },
+  "assignVoteModal": {
+    "title": "Assign grade",
+    "exam": "Exam",
+    "examPlaceholder": "Select an exam",
+    "student": "Enrolled student",
+    "studentLoading": "Loading...",
+    "studentPlaceholder": "Select a student",
+    "vote": "Grade",
+    "cancel": "Cancel",
+    "submit": "Assign",
+    "examRequired": "Select an exam",
+    "studentRequired": "Select an enrolled student",
+    "voteRange": "Grade must be between 18 and 30",
+    "examsError": "Unable to load exams",
+    "studentsError": "Unable to load enrolled students",
+    "assignError": "Assignment error"
+  },
+  "errors": {
+    "invalid_credentials": "The credentials are invalid.",
+    "email_taken": "This email is already registered.",
+    "already_enrolled": "You are already enrolled in this exam.",
+    "exam_holiday": "The selected date is an Italian public holiday: the exam cannot be created.",
+    "holiday_service_unavailable": "The holiday service is unavailable. Please try again later.",
+    "not_enrolled": "The user is not enrolled in this exam: cannot assign a grade.",
+    "rate_limited": "Too many requests. Please try again later.",
+    "generic": "An error occurred."
+  }
+}

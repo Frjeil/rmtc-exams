@@ -1,0 +1,14 @@
+# Ambiente
+.env
+*.local
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Docker
+.docker/
+
+# Tooling locale
+.serena/

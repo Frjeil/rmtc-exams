@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "exams": "Esami",
+    "myExams": "I miei esami",
+    "votes": "Votazioni",
+    "login": "Login",
+    "logout": "Logout",
+    "language": "Lingua",
+    "roles": {
+      "user": "Studente",
+      "admin": "Admin",
+      "supervisor": "Supervisor"
+    }
+  },
+  "login": {
+    "title": "Accedi",
+    "email": "Email",
+    "emailPlaceholder": "nome@esempio.it",
+    "password": "Password",
+    "submit": "Login",
+    "noAccount": "Non hai un account?",
+    "registerLink": "Registrati",
+    "errors": {
+      "email": "Email non valida",
+      "password": "Password obbligatoria"
+    },
+    "success": "Login effettuato",
+    "error": "Errore durante il login"
+  },
+  "register": {
+    "title": "Registrati",
+    "name": "Nome",
+    "namePlaceholder": "Il tuo nome",
+    "nameRequired": "Nome obbligatorio",
+    "email": "Email",
+    "password": "Password",
+    "confirm": "Conferma password",
+    "submit": "Registrati",
+    "minPassword": "Minimo 8 caratteri",
+    "passwordMismatch": "Le password non coincidono",
+    "success": "Registrazione completata",
+    "error": "Errore durante la registrazione",
+    "hasAccount": "Hai già un account?",
+    "loginLink": "Accedi"
+  },
+  "exams": {
+    "title": "Esami disponibili",
+    "titleFilter": "Titolo",
+    "titlePlaceholder": "Filtra per titolo",
+    "date": "Data",
+    "sort": "Ordina",
+    "filter": "Filtra",
+    "enroll": "Iscriviti",
+    "enrolled": "Iscritto",
+    "enrollSuccess": "Iscrizione a \"{{title}}\" completata",
+    "alreadyEnrolled": "Sei già iscritto a \"{{title}}\"",
+    "enrollError": "Errore durante l'iscrizione",
+    "loadError": "Errore di caricamento",
+    "enrolledError": "Errore nel recupero delle iscrizioni",
+    "newExam": "Nuovo esame",
+    "assignVote": "Assegna voto"
+  },
+  "myExams": {
+    "title": "I miei esami",
+    "exam": "Esame",
+    "date": "Data",
+    "vote": "Voto",
+    "pending": "Da valutare",
+    "empty": "Nessun esame."
+  },
+  "votes": {
+    "title": "Votazioni",
+    "exam": "Esame",
+    "date": "Data",
+    "student": "Studente",
+    "vote": "Voto",
+    "gradedOn": "Valutato il",
+    "empty": "Nessuna votazione assegnata.",
+    "assign": "Assegna voto",
+    "titleFilter": "Titolo",
+    "titlePlaceholder": "Filtra per titolo",
+    "sort": "Ordina",
+    "filter": "Filtra"
+  },
+  "newExamModal": {
+    "title": "Nuovo esame",
+    "titleField": "Titolo",
+    "titlePlaceholder": "Es. Analisi Matematica I",
+    "date": "Data",
+    "cancel": "Annulla",
+    "submit": "Crea esame",
+    "titleRequired": "Titolo obbligatorio",
+    "dateInvalid": "Data non valida",
+    "created": "Esame \"{{title}}\" creato",
+    "error": "Errore durante la creazione"
+  },
+  "assignVoteModal": {
+    "title": "Assegna voto",
+    "exam": "Esame",
+    "examPlaceholder": "Seleziona un esame",
+    "student": "Utente iscritto",
+    "studentLoading": "Caricamento...",
+    "studentPlaceholder": "Seleziona un utente",
+    "vote": "Voto",
+    "cancel": "Annulla",
+    "submit": "Assegna",
+    "examRequired": "Seleziona un esame",
+    "studentRequired": "Seleziona un utente iscritto",
+    "voteRange": "Il voto deve essere tra 18 e 30",
+    "examsError": "Impossibile caricare gli esami",
+    "studentsError": "Impossibile caricare gli iscritti",
+    "assignError": "Errore durante l'assegnazione"
+  },
+  "errors": {
+    "invalid_credentials": "Le credenziali inserite non sono valide.",
+    "email_taken": "Questa email è già registrata.",
+    "already_enrolled": "Sei già iscritto a questo esame.",
+    "exam_holiday": "La data scelta è un giorno festivo italiano: non è possibile creare l'esame.",
+    "holiday_service_unavailable": "Il servizio dei giorni festivi non è disponibile. Riprova più tardi.",
+    "not_enrolled": "L'utente non è iscritto a questo esame: impossibile assegnare un voto.",
+    "rate_limited": "Troppe richieste. Riprova più tardi.",
+    "generic": "Si è verificato un errore."
+  }
+}

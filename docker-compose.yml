@@ -1,0 +1,71 @@
+name: rmtc-exams
+
+services:
+  db:
+    image: postgres:18
+    container_name: rmtc-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-rmtc}
+      POSTGRES_USER: ${DB_USERNAME:-rmtc}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-rmtc}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-rmtc} -d ${DB_DATABASE:-rmtc}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - rmtc
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: rmtc-backend
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:80"
+    environment:
+      APP_ENV: local
+      APP_URL: http://localhost:${APP_PORT:-8080}
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE:-rmtc}
+      DB_USERNAME: ${DB_USERNAME:-rmtc}
+      DB_PASSWORD: ${DB_PASSWORD:-rmtc}
+    volumes:
+      - ./backend:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - rmtc
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rmtc-frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    environment:
+      VITE_BACKEND_URL: http://backend:80
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    networks:
+      - rmtc
+
+volumes:
+  db_data:
+
+networks:
+  rmtc:
+    driver: bridge
