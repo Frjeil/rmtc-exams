@@ -19,6 +19,11 @@ fi
 
 php artisan migrate --force
 
+SEEDED=$(php artisan tinker --execute="echo App\\Models\\User::count();" 2>/dev/null)
+if [ "$SEEDED" = "0" ]; then
+    php artisan db:seed --force
+fi
+
 if [ -d /var/www/html/vendor/darkaonline/l5-swagger ]; then
     php artisan l5-swagger:generate
 fi

@@ -1,5 +1,7 @@
 # rmtc-exams
 
+[![CI](https://github.com/Frjeil/rmtc-exams/actions/workflows/ci.yml/badge.svg)](https://github.com/Frjeil/rmtc-exams/actions/workflows/ci.yml)
+
 Applicazione API per la gestione di trascrizioni d'esame (AI-Assisted Hiring Test).
 
 - **Backend**: Laravel 13 (PHP 8.5), API-only, autenticazione **Sanctum** (Bearer token)
@@ -24,8 +26,9 @@ Serve una rebuild solo dopo modifiche ai `Dockerfile`:
 | Backend (API) | http://localhost:8080/api |
 | PostgreSQL | localhost:5432 (db `rmtc`, user `rmtc`, password `rmtc`) |
 
-Le migration girano automaticamente all'avvio del backend. Per un DB pulito con
-dati demo: `make artisan cmd='migrate:fresh --seed'`.
+Le migration girano automaticamente all'avvio del backend; se il database è
+vuoto viene anche eseguito il seed dei dati demo. Per un reset con dati demo:
+`make artisan cmd='migrate:fresh --seed'`.
 
 ### Documentazione API
 
